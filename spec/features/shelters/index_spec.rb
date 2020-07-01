@@ -8,8 +8,6 @@ RSpec.describe 'Shelters index page' do
     visit '/shelters'
 
     expect(page).to have_content(shelter_1.name)
-    expect(page).to have_content("Address: #{shelter_1.address} City: #{shelter_1.city} State: #{shelter_1.state} ZIP: #{shelter_1.zip}")
     expect(page).to have_content(shelter_2.name)
-    expect(page).to have_content("Address: #{shelter_2.address} City: #{shelter_2.city} State: #{shelter_2.state} ZIP: #{shelter_2.zip}")
   end
 end
