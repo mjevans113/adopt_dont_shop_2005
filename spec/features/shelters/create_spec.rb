@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Shelters index page' do
-  it 'allows a user to follow the link to create a new shelter' do
+  it 'allows the user to follow the link to create a new shelter' do
     visit '/shelters'
 
     expect(page).to_not have_content('All Your Pets Are Belong to Us')
