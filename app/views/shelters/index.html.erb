@@ -5,4 +5,6 @@
 <% @shelters.each do |shelter| %>
   <h2><%= shelter.name %></h2>
   <%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" %>
+  <br>
+  <%= button_to "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete %>
 <% end %>
