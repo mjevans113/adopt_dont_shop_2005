@@ -8,7 +8,7 @@ RSpec.describe 'Shelters index page' do
 
     expect(page).to_not have_content('All Your Pets Are Belong to Us')
 
-    click_on "Edit #{shelter_1.name}"
+    click_button "Edit #{shelter_1.name}"
 
     expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
 
