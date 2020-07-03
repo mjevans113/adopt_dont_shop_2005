@@ -1,7 +1,8 @@
 <h1>All Pets</h1>
 <hr>
 <% @pets.each do |pet| %>
-  <%= image_tag "/assets/images/#{pet.image}", height: '100', width: 'auto' %>
+<br>
+  <%= image_tag "#{pet.image}", height: '200', width: 'auto' %>
   <h3><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h3>
   <p>
     Approximate Age: <%= "#{pet.age}" %>
@@ -13,8 +14,8 @@
   <%= button_to "Edit #{pet.name} Info", "/pets/#{pet.id}/edit", method: :get %>
   <br>
   <%= button_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %>
+  <br>
+  <hr>
 <% end %>
-<br>
-<hr>
 <br>
 <%= button_to 'Create Pet', '/pets/new', method: :get %>
