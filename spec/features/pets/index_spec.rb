@@ -10,14 +10,19 @@ RSpec.describe 'Pets index page' do
 
     visit '/pets'
 
-    expect(page).to have_css("img[src*='rhodesian.jpg']")
     expect(page).to have_content(pet_1.name)
     expect(page).to have_content("Shelter: #{shelter_1.name}")
-    expect(page).to have_css("img[src*='airedale.jpg']")
+    expect(page).to have_content("Age: #{pet_1.age}")
+    expect(page).to have_content("Sex: #{pet_1.sex}")
     expect(page).to have_content(pet_2.name)
     expect(page).to have_content("Shelter: #{shelter_1.name}")
-    expect(page).to have_css("img[src*='dalmation.jpg']")
+    expect(page).to have_content("Age: #{pet_2.age}")
+    expect(page).to have_content("Sex: #{pet_2.sex}")
     expect(page).to have_content(pet_3.name)
     expect(page).to have_content("Shelter: #{shelter_2.name}")
+    expect(page).to have_content("Age: #{pet_3.age}")
+    expect(page).to have_content("Sex: #{pet_3.sex}")
   end
 end
+
+# expect(page).to have_css("img[src*='#{pet_3.image}']")
