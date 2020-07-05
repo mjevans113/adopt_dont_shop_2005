@@ -11,7 +11,7 @@
 <hr>
 <% @pets.each do |pet| %>
 <br>
-<%= image_tag "#{pet.image}", height: '200', width: 'auto' %>
+<%= image_tag "#{pet.image}", height: '200', width: 'auto', alt: 'Image' %>
 <h3><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h3>
 <p>
   Approximate Age: <%= "#{pet.age}" %>
@@ -26,3 +26,4 @@
 <br>
 <hr>
 <% end %>
+<p>Total Pets: <%= "#{@pets.count}" %>
