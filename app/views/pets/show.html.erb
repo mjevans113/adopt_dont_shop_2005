@@ -10,4 +10,6 @@
   Adoption Status: <%= "#{@pet.status}" %>
 </p>
 <br>
-<%= button_to "Edit Pet Info", "/pets/#{@pet.id}/edit", method: :get %>
+<%= button_to "Edit #{@pet.name} Info", "/pets/#{@pet.id}/edit", method: :get %>
+<br>
+<%= button_to "Delete #{@pet.name}", "/pets/#{@pet.id}", method: :delete %>

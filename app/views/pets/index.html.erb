@@ -10,8 +10,12 @@
     Sex: <%= "#{pet.sex}" %>
     <br>
     Shelter: <%= "#{Shelter.find(pet.shelter_id).name}" %>
+    <%= button_to "Edit #{pet.name} Info", "/pets/#{pet.id}/edit", method: :get %>
+    <br>
+    <%= button_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %>
   </p>
   <hr>
 <% end %>
 <br>
 <%= button_to 'Create Pet', '/pets/new', method: :get %>
+<br>
