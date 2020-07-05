@@ -1,3 +1,8 @@
+<div class='topnav'>
+  <a href='/shelters'>Shelters Index</a>
+  <a href='/pets'>Pets Index</a>
+</div>
+
 <h1>Edit <%= @pet.name %> Info</h1>
 
 <%= form_tag "/pets/#{@pet.id}", method: :patch do %>
