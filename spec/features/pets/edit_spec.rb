@@ -7,7 +7,7 @@ RSpec.describe 'Pet show page' do
 
     visit "/pets/#{pet_1.id}"
 
-    click_button "Edit Pet Info"
+    click_button "Edit #{pet_1.name} Info"
 
     expect(current_path).to eq("/pets/#{pet_1.id}/edit")
 
