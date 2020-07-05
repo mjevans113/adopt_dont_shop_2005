@@ -14,7 +14,7 @@
  *= require_self
  */
 body {
-  background-color: rgb(173, 216, 230, 0.5);
+  background-color: rgba(173, 216, 230, 0.5);
   font-family: 'Georgia', 'Times', 'Times New Roman', serif;
 }
 .topnav {
