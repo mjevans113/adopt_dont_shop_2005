@@ -18,6 +18,7 @@
   <br>
   Sex: <%= "#{pet.sex}" %>
   <br>
+  Adoption Status: <%= "#{pet.status}" %>
 </p>
 <%= button_to "Edit #{pet.name} Info", "/pets/#{pet.id}/edit", method: :get %>
 <br>

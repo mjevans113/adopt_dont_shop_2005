@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Pet show page' do
   it "allows the user to follow a link to update the pet's info" do
     shelter_1 = Shelter.create!(name: 'Got A Lotta Pets', address: '456 EzPz Ln', city: 'LVegas', state: 'NV', zip: '12345')
-    pet_1 = shelter_1.pets.create!(name: 'Sarah Jessica Barker', age: 4, sex: 'Female', image: 'dalmation.jpg', description: 'Dalmation')
+    pet_1 = shelter_1.pets.create!(name: 'Sarah Jessica Barker', age: 4, sex: 'Female', image: 'dalmatian.jpg', description: 'Dalmation')
 
     visit "/pets/#{pet_1.id}"
 
