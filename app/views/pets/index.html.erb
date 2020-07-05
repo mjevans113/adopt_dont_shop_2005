@@ -11,10 +11,6 @@
     <br>
     Shelter: <%= "#{Shelter.find(pet.shelter_id).name}" %>
   </p>
-  <%= button_to "Edit #{pet.name} Info", "/pets/#{pet.id}/edit", method: :get %>
-  <br>
-  <%= button_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %>
-  <br>
   <hr>
 <% end %>
 <br>
