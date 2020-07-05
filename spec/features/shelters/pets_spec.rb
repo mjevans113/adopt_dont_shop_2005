@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Individual shelter's pets index page" do
+RSpec.describe "Shelter's pets index page" do
   it 'displays all (but only) pets available at that shelter' do
     shelter_1 = Shelter.create!(name: 'Pets, Pets, Pets', address: '123 Easy St', city: 'Denver', state: 'CO', zip: '80204')
     shelter_2 = Shelter.create!(name: 'Got A Lotta Pets', address: '456 EzPz Ln', city: 'LVegas', state: 'NV', zip: '12345')
