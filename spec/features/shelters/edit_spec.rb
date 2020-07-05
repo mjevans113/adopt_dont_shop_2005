@@ -16,7 +16,7 @@ RSpec.describe 'Shelters index page' do
 
     click_on 'Update Shelter Info'
 
-    expect(current_path).to eq('/shelters')
+    expect(current_path).to eq("/shelters/#{shelter_1.id}")
     expect(page).to have_content('All Your Pets Are Belong to Us')
   end
 end
