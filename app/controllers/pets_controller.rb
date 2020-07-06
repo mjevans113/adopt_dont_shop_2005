@@ -8,6 +8,7 @@ class PetsController < ApplicationController
   end
 
   def new
+    @shelter_id = params[:shelter_id]
   end
 
   def create
@@ -20,9 +21,9 @@ class PetsController < ApplicationController
   end
 
   def update
-    @pet = Pet.find(params[:id])
-    @pet.update(pet_params)
-    redirect_to "/pets/#{@pet.id}"
+    pet = Pet.find(params[:id])
+    pet.update(pet_params)
+    redirect_to "/pets/#{pet.id}"
   end
 
   def destroy

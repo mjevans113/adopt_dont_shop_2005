@@ -20,19 +20,20 @@ class SheltersController < ApplicationController
   end
 
   def update
-    @shelter = Shelter.find(params[:id])
-    @shelter.update(shelter_params)
-    redirect_to "/shelters/#{@shelter.id}"
+    shelter = Shelter.find(params[:id])
+    shelter.update(shelter_params)
+    redirect_to "/shelters/#{shelter.id}"
   end
 
   def destroy
-    Shelter.destroy(params[:id])
+    shelter = Shelter.find(params[:id])
+    shelter.pets.destroy_all
+    shelter.destroy
     redirect_to '/shelters'
   end
 
   def pets
     @shelter = Shelter.find(params[:id])
-    @pets = @shelter.pets
   end
 
   private
